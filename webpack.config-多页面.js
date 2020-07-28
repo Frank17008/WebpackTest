@@ -13,7 +13,10 @@ module.exports = {
     // 模式 development production
     mode: "development",
     // 入口文件
-    entry: "./src/index.js",
+    entry: {
+        home: './home.js',
+        other: './other.js'
+    },
     // 出口配置
     output: {
         // 打包后的文件名
@@ -21,7 +24,6 @@ module.exports = {
         // 打包后的路径  必须是一个绝对路径
         path: path.resolve(__dirname, "dist"),
     },
-    devtool: 'source-map',
     // 开发服务器配置
     devServer: {
         // 端口
